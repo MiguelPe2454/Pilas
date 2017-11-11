@@ -34,6 +34,9 @@ public class Main extends Application {
         pilas.Cima();
         pilas.Pop();
         pilas.peek();
+
+
+    System.out.print("tamaño de la pila es: " + pilas.getTamaño ());
     }
 
 

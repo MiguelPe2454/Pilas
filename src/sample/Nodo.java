@@ -4,10 +4,11 @@ package sample;
  * Created by lenovo on 08/11/2017.
  */
 public class Nodo {
-    private int valor;
-    private Nodo prox;
+    private int valor; // se guarda el valor
+    private Nodo prox; //para enlazar nodos
 
-    public Nodo(){
+
+    public Nodo(){ //contructor que inicializamos el varlla variables
         this.valor = 0;
         this.prox = null;
     }
@@ -16,6 +17,8 @@ public class Nodo {
         this.valor = v;
         this.prox = null;
     }
+
+
 
     public  void  setValor(int v){
         valor = v;
@@ -30,6 +33,8 @@ public class Nodo {
     }
 
     public  Nodo getProx(){
+
         return prox;
+
     }
 }

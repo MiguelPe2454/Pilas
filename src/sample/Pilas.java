@@ -4,7 +4,10 @@ package sample;
  * Created by lenovo on 08/11/2017.
  */
 public class Pilas {
-    private Nodo top;
+    private Nodo top; //inicio de la pila
+
+    private int tamaño; //registrar el tamaño de la pila
+
 
     public Pilas(){
         top = null;
@@ -14,7 +17,7 @@ public class Pilas {
         return (top == null);
     }
 
-    public void Push(int valor){
+    public void Push(int valor){//Insertar
         Nodo nuevoNodo;
         if(vacia())
             top = new Nodo(valor);
@@ -25,7 +28,12 @@ public class Pilas {
         }
     }
 
-    public void peek(){
+    public int getTamaño (){ //Consulta los elemntos (nodos que tiene la pla)
+        //return numero entero entre 0 y n numros
+        return tamaño;
+    }
+
+    public void peek(){//Mostrar
         Nodo temp = top;
         if(temp!=null){
             System.out.println("La pila es: ");
@@ -38,14 +46,14 @@ public class Pilas {
             System.out.println("PILA VACÍA.");
     }
 
-    public void Cima(){
+    public void Cima(){//Buscar
         if(!vacia())
             System.out.println("Cima; "+top.getValor());
         else
             System.out.println("La pila esta vacía");
     }
 
-    public void Pop(){
+    public void Pop(){ //Borrar / Eliminar
         if(!vacia()){
             System.out.println("Data extraido: "+top.getValor());
             top = top.getProx();
@@ -53,6 +61,5 @@ public class Pilas {
         else
             System.out.println("La pila esta vacia");
     }
-
 
 }
